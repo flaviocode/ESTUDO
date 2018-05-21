@@ -1,0 +1,218 @@
+---------------------------------------------------------------------
+          ENVIANDO DADO DO FORM PARA ARQUIVO LOCAL E EXTERNO
+---------------------------------------------------------------------
+<?php $nome = (isset($_GET['nome']) ? $_GET['nome'] : 'vazio'); ?>
+
+    forma para arquivo local
+    <form action="">
+        <p>Nome Recebido: <?=$nome?></p>
+        <input type="text" name="nome" value="<?=$nome + 1?>">               
+        <button>Enviar</button>
+    </form>
+
+    forma para arquivo externo
+    <form action="nome-recebido.php">
+        <input type="text" name="nome">
+        <button>Enviar</button>
+    </form>
+---------------------------------------------------------------------
+
+
+
+
+
+---------------------------------------------------------------------
+ ADICIONANDO PRODUTO NO BANDO DE DADOS E CONFIRMANDO NA MESMA PÁGINA
+---------------------------------------------------------------------
+<?php 
+    $nome = (isset($_GET["nome"]) ? $_GET["nome"] : "");
+    $preco = (isset($_GET["preco"]) ? $_GET["preco"] : "");
+
+    $conexao = mysqli_connect('localhost', 'root', '', 'meuBanco');
+    $query = "insert into nomeDaTabela (nome, preco) values ('{$nome}', {$preco})";
+?>
+
+<?php if(mysqli_query($conexao, $query)) { ?>
+    <p><?=$nome?> adicionado com sucesso.</p>
+<?php } else {?>
+    <!--  esse add vem do form -->
+    <?php if(array_key_exists("add", $_GET) && $_GET["add"]=="true") { ?>
+        <p>Erro</p>
+    <?php } ?>
+<?php } ?>
+
+<?php mysqli_close($conexao);?>
+
+<form>
+    <input type="text" name="nome" Placeholder="nome"><br/>
+    <input type="text" name="preco" Placeholder="preco"><br/>
+    <input type = "hidden" name="add" value="true">
+    <button>Enviar</button>
+</form>
+---------------------------------------------------------------------
+
+
+
+
+
+---------------------------------------------------------------------
+     FUNÇÃO INSETIR PRODUTO | MENSGEM DE CONFIRMAÇÃO OU DE ERRO
+---------------------------------------------------------------------
+<?php 
+    $nome = (isset($_GET["nome"]) ? $_GET["nome"] : "");
+    $preco = (isset($_GET["preco"]) ? $_GET["preco"] : "");
+
+    $conexao = mysqli_connect('localhost', 'root', '', 'meuBanco');
+    
+    function insereProduto ($nome, $preco, $conexao) {
+        $query = "insert into nomeDaTabela (nome, preco) values ('{$nome}', {$preco})";
+        return mysqli_query($conexao, $query);
+    }
+?>
+
+<?php if(insereProduto($nome, $preco, $conexao)) { ?>
+    <p><?=$nome?> adicionado com sucesso.</p>
+<?php } else {?>
+    <!--  esse add vem do form -->
+    <?php if(array_key_exists("add", $_GET) && $_GET["add"]=="true") { ?>
+        <p>Erro</p>
+    <?php } ?>
+<?php } ?>
+
+<?php mysqli_close($conexao);?>
+
+<form>
+    <input type="text" name="nome" Placeholder="nome" required><br/>
+    <input type="text" name="preco" Placeholder="preco" required><br/>
+    <input type = "hidden" name="add" value="true">
+    <button>Enviar</button>
+</form>     
+---------------------------------------------------------------------
+
+
+
+
+
+---------------------------------------------------------------------
+                       LISTANDO TODOS OS PRODUTOS
+---------------------------------------------------------------------
+<?php 
+          $resultado = mysqli_query($conexao, "select * from nomeDaTabela");
+
+          while($produto = mysqli_fetch_assoc($resultado)) {
+            echo $produto['nome'] . " R$ " . $produto['preco'] . "<br/>";    
+          }
+          mysqli_close($conexao);
+?>
+---------------------------------------------------------------------
+
+
+
+
+
+---------------------------------------------------------------------
+                  LISTANDO TODOS OS PRODUTOS COM FUNÇÃO
+---------------------------------------------------------------------
+        function listaProdutos($conexao) {
+            $todosOsProdutos = array();
+            $resultadoDaSelecao = mysqli_query($conexao, "select * from nomeDaTabela");
+            while($produto = mysqli_fetch_assoc($resultadoDaSelecao)) {
+                  array_push($todosOsProdutos, $produto);
+            }
+            return $todosOsProdutos;
+        }
+        
+        $produtos = listaProdutos($conexao);
+        foreach($produtos as $produtoAtual) {
+            echo $produtoAtual['nome'] . " R$ " . $produtoAtual['preco'] . "<br/>";
+        }
+
+        mysqli_close($conexao);
+---------------------------------------------------------------------
+
+
+
+
+
+---------------------------------------------------------------------
+              ORGANIZANDO O RESULADO DA BUSCA EM UMA TABELA
+---------------------------------------------------------------------
+        $produtos = listaProdutos($conexao);?>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>Nome</th>
+                <th>Preço</th>
+            </tr>
+            <?php foreach($produtos as $produtoAtual) : ?>
+                <tr>
+                    <td><?=$produtoAtual['id']?></td>
+                    <td><?=$produtoAtual['nome']?></td>
+                    <td>R$ <?=$produtoAtual['preco']?></td>
+                </tr>
+            <?php endforeach ?>
+        </table>
+        <?php mysqli_close($conexao) ?>
+---------------------------------------------------------------------
+
+
+
+
+
+---------------------------------------------------------------------
+           APAGANDO UM REGISTRO COM MENSAGEM DE CONFIRMAÇÃO
+---------------------------------------------------------------------
+        function removeProduto($conexao, $id) {
+           $query = "delete from nomeDaTabela where id={$id}";
+           return mysqli_query($conexao, $query);
+        }
+        
+        $id = (isset($_POST["id"]) ? $_POST["id"] : ""); ?>
+
+        <?php if(array_key_exists("removido", $_POST) && $_POST["removido"]=="true") { ?>
+            <p><?=$nome?> removido com sucesso.</p>
+        <?php } 
+
+        removeProduto($conexao, $id);
+
+        $produtos = listaProdutos($conexao);?>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Remover</th>
+            </tr>
+            <?php foreach($produtos as $produtoAtual) : ?>
+                <tr>
+                    <td><?=$produtoAtual['id']?></td>
+                    <td><?=$produtoAtual['nome']?></td>
+                    <td>R$ <?=$produtoAtual['preco']?></td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" name="id" value="<?=$produtoAtual['id']?>">
+                            <input type="hidden" name="nome" value="<?=$produtoAtual['nome']?>">
+                            <input type="hidden" name="removido" value="true">
+                            <button>Remover</button>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach ?>
+        </table>
+---------------------------------------------------------------------
+
+
+
+
+
+---------------------------------------------------------------------
+                             MÉTODO POST
+---------------------------------------------------------------------
+
+<form action="..." method="post">
+$nome = $_POST["nome"];
+ALTER TABLE produtos add COLUMN categoria_id integer;
+UPDATE produtos set categoria_id=3;
+UPDATE produtos set categoria_id=4 WHERE id=26; 
+select p.*,c.nome as categoria_nome from produtos as p join categorias as c on c.id=p.categoria_id;
+ALTER TABLE produtos add COLUMN usado boolean DEFAULT 0;

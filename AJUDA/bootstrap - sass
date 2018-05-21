@@ -1,0 +1,28 @@
+INSTALL
+instalr o nodel.js
+instalar a atualizar o xcode
+acessar a pasta e dititar 
+
+npm init - ir dando enter
+npm install bootstrap
+npm install jquery
+npm install popper.js
+npm install font-awesome
+sudo gem install sass
+
+criar uma pasta stye para manter os arquivos de estilos próprios
+
+e rodar o sass compilando as seguintes pastas
+sass --watch node_modules/bootstrap/scss:node_modules/bootstrap/compiler 
+node_modules/font-awesome/scss:node_modules/font-awesome/css 
+style/scss:style/css
+
+todos os watch acima são na mesma linha
+
+caminhos
+  <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+  
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>

@@ -1,0 +1,18 @@
+----------------------------------------------------
+extenção para salvar e ver
+sem precisar atualizar
+Live Server
+
+
+----------------------------------------------------
+htmltagwrap
+selecionar um trecho de texto e com o atalho option + w
+colocar o conteúdo em uma tag, podendo alterar a tag
+digitanto a nova tag logo após usar o atalho
+
+
+----------------------------------------------------
+Path Intellisense
+deveria carregar as pastas e os arquivos ao precionar
+coltrol + epaço, quando se precisa de uma referência,
+mas aparentemente funciona sem essa extenço.

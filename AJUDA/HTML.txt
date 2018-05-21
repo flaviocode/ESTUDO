@@ -1,0 +1,2 @@
+comand + option + I = abrir o inspetor no mac
+control + shift + I = abrir o inspetor no windows

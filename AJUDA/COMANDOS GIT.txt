@@ -1,0 +1,53 @@
+git config --global user.name "Nome"
+git config --global user.email "email@gmail.com"
+
+ssh-keygen - gera a chave em usuario/.ssh, o arquivo id_rsa.pub com bloco de notas,
+git clone git@github...git
+git push - para enviar
+git pull - para pegar depois que já estiver clonado
+
+git init
+git add nome.txt
+git add *.txt
+git add .
+git commit -m 'mensagem'
+git commit -a -m 'mensagem'
+
+.gitignore
+nome.txt
+diretorio/
+
+git diff           / visualizar modificações nao add .
+git diff --staged  / visualizar modificações na staged area
+
+
+git log 	/ visualizar todos os commits (q = sair)
+git log -p	
+git log -p -1	/abre interface gráfica
+gitk 
+
+git log --pretty=oneline / lista os commits por linha
+git commit --amend -m 'mensagem (edicao)' / adiciona itens da staged ao ultimo commit
+git reset HEAD nome.txt / retira arquivos da staged ares
+git checkout -- nome.txt / voltar um arquivo que nao está ainda na staged area
+
+git rm nome.txt / para remover arquivos que foram deletados do projeto
+
+git tag -a v1.0 -m 'versao 1.0' / cria uma tag
+git tag -a v0.0 eb988d48e2d3d6124428db3dbccc32120ce3a459 -m 'versao 0.0'
+git show v0.0
+git checkout v0.0
+git checkout master / voltar 
+git tag -d v0.0 / apaga a tag
+
+git branch
+git branch teste
+git checkout teste
+git checkout master
+git branch -d teste
+
+git push -–tags
+git fetch –tags
+git merge tag_name -m 'MENSAGEM PARA O MERGE'
+
+defaults write com.apple.finder AppleShowAllFiles -bool false / OCULTAR ARQUIVOS OCULTOS

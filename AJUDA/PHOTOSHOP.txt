@@ -1,0 +1,6 @@
+p      = ferramenta caneta
+clicar = adiciona um novo nó
+comand = direct selection
+alt    = move uma das alças individualmente
+
+comand e clicar na imagem da camada = transformar a forma em seleção
