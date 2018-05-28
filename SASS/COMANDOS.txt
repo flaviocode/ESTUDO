@@ -1,0 +1,10 @@
+--------------------------------------------
+rgba($cor-auxiliar, 0.8);
+
+--------------------------------------------
+sudo gem install sass
+sass --version -> Ruby Sass 3.5.6
+sass estilos.scss:estilos.css
+sass --watch estilos.scss:estilos.css
+
+--------------------------------------------
