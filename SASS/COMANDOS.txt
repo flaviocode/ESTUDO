@@ -8,3 +8,16 @@ sass estilos.scss:estilos.css
 sass --watch estilos.scss:estilos.css
 
 --------------------------------------------
+$raio: 300px;
+
+@mixin borda-arredondada($valor: 0.3em) {
+  -webkit-border-radius: $valor;
+  -moz-border-radius: $valor;
+  -o-border-radius: $valor;
+  -ms-border-radius: $valor;
+  border-radius: $valor;
+}
+
+@include borda-arredondada($raio);
+@include borda-arredondada;
+--------------------------------------------
