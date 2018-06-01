@@ -21,3 +21,15 @@ $raio: 300px;
 @include borda-arredondada($raio);
 @include borda-arredondada;
 --------------------------------------------
+
+ANIMHAMENTO
+
+.menu-principal {
+  a {
+    color: white;                     
+	
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+--------------------------------------------
