@@ -1,0 +1,9 @@
+ATALHOS
+ALT + Z = quebra as linhas 
+ALT + SHIFT + pra baixo = duplicar a dinha
+
+-----------------------------------------
+PLUGIN
+live server
+-----------------------------------------
+
