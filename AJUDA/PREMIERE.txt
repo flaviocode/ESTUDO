@@ -1,19 +1,39 @@
 http://www.videocopilot.net/
+
+----------------------------------------------------------------------
+JANELA PARA ANALIZAR AS CORES
+para deixar uma janela flutuando mover ela com COMMAND
+WINDOW / LUMETRI SCOPES
+também encontrado no workspace COLOR
+
+- VECTORSCOPE YUV
+- PARADE (RGB)
+
+LUMETRI COLOR
+clicando duas vezes no controlador ele reseta
+
+BASIC CORRECTION, CURVES (HUE SATURATION CURVES), COLOR WHEELS & MATCH, CREATIVE,
+
+EFEITO:
+LEVELS, THREE-WAY, FAST COLOR CORRECTOR
+----------------------------------------------------------------------
+
 ----------------------------------------------------------------------
 ATALHOS
 ----------------------------------------------------------------------
+SETA + COMMAND -> MOVE A TRILHA DE VIDEO/AUDIO UM FREME (+ shift move mais)
 L -> ADIANTAR O VÍDEO
 J -> RETORNAR O VÍDEO
-TECLA G -> AUDIO GAIN
+G -> AUDIO GAIN
+C -> FERRAMENTA CORTE (GILETE), COM SHIFT CORTA TUDAS AS CAMADAS
+N -> SERVE PARA MOVER O PONTO DE CORTE
 CONTROL L -> SEPARAR OU JUNTAR A TRILA DE AUDIO DA TRILHA DE VDEO
-TECLA C -> FERRAMENTA CORTE (GILETE), COM SHIFT CORTA TUDAS AS CAMADAS
 TRANSIÇÃO DE ÁUDIO -> EFEITO / AUDIO TRANSITON / CONSTANTE POWER
 SHIFT + D -> USA A TRANSIÇÃO PADRÃO
 setar a transição como padrão (preferencia / timeline / definir um tempo padrão par)
 TECLA ALT E SELECIONAR -> SELECIONA APENAS O ÁUDIO OU O VÍDEO
 ALTERAR VALORES DE MANEIRA MIAS CONTROLADA, SEGURAR A TECLA CONTROL(lenta) OU SHIFIT(rápida), 
 SHIT E -> ABILITA OU DESABILITA O ÁUDIO
-TECLA N -> SERVE PARA MOVER O PONTO DE CORTE
 COMAND U -> CRIA SUB-CLIPE
 SHIFT I -> MOVE PARA O INICIO DA MARCACAO
 SHIFT O -> MOVE PARA O FIM DA MARCACAO
