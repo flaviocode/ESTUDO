@@ -1,6 +1,8 @@
 ATALHOS
 ALT + Z = quebra as linhas 
 ALT + SHIFT + pra baixo = duplicar a dinha
+CONTROL + COMMAND + 2 = divide a tela em duas
+COMAND + [ ou ] = também serve como tabulação, porem melhor
 
 -----------------------------------------
 PLUGIN
