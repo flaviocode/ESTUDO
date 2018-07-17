@@ -1,0 +1,32 @@
+https://nodejs.org/en/
+https://sass-lang.com/guide
+http://gulpjs.com/ (lembrar de colocar sudo na hora de instalar)
+https://getbootstrap.com/
+
+npm init
+npm install bootstrap@4.1.2
+npm install jquery
+npm install popper.js
+
+npm install gulp --save-dev
+npm install gulp-sass
+npm install gulp browser-sync
+
+
+ARQUIVO gulp
+---------------------------
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+gulp.task('sass', function() {
+    return gulp.src(['node_modules/bootstrap/scss/*.scss', 'src/scss/*.scss'])
+    .pipe(sass()) //converter os arquivos sass em css
+    .pipe(gulp.dest('src/css')); //destino dos arquivos convertidos
+});
+
+gulp.task('watch', function() {
+    gulp.watch(['node_modules/bootstrap/scss/*.scss', 'src/scss/*.scss'], ['sass']);
+});
+
+gulp.task('default', ['sass', 'watch']);
+---------------------------

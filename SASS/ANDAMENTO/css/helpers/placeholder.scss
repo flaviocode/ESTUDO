@@ -1,0 +1,15 @@
+//placeholder, para adicionar no código
+//tem que usar @extend %nome-do-placeholder
+%imagem-replacement {
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  }
+  
+  %sombra-padrao {
+    -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  }

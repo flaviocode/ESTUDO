@@ -1,0 +1,13 @@
+
+//variavel usada na borda arrendocada
+$raio: 300px;
+
+//mixin recebendo um valor como parametro
+//mixin informando um valor padrao
+@mixin borda-arredondada($valor: 0.3em) {
+  -webkit-border-radius: $valor;
+  -moz-border-radius: $valor;
+  -o-border-radius: $valor;
+  -ms-border-radius: $valor;
+  border-radius: $valor;
+}
