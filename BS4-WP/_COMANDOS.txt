@@ -30,3 +30,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['sass', 'watch']);
 ---------------------------
+
+https://www.pexels.com/
+https://getbootstrap.com
+https://coolors.co/
