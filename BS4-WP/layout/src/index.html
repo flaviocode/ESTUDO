@@ -13,7 +13,222 @@
   </head>
 
   <body>
-    <h1>Hello, world!</h1>
+    
+    <!-- CONTAINER PRINCIPAL -->
+    <div class="container">
+
+      <!-- CABECALHO -->
+      <div class="row my-5 align-items-center">
+
+        <div class="col-md-8 col-sm-12">
+          <h1>Meu primeito tema</h1>
+          <p class="lead">Fiz com WordPress</p>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+          <form>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="O que procura">
+              <div class="input-group-append">
+                <button class="btn btn-my-color-5" type="button">Buscar</button>
+              </div>
+            </div>
+          </form>          
+        </div>
+
+      </div> <!-- FIM CABECALHO -->
+
+
+      <!-- BARRA DE NAVEGACAO -->
+      <div class="row">
+
+        <!-- COL -->
+        <div class="col mb-5">
+         
+          <!-- BARRA DE NAVEGACAO EM SI -->
+          <nav class="navbar navbar-expand-lg navbar-dark bg-my-color-2 rounded">
+
+            <!-- BOTAO QUE ESCONDE O MENU EM TELAS PEQUENAS -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#meuNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button> 
+
+            <!-- DADOS DA BARRA DE NAVEGACAO -->
+            <div class="collapse navbar-collapse" id="meuNavbar">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a href="" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Perfil</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Projetos</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Novidades</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Planos</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Contatos</a>
+                </li>
+              </ul>
+            </div><!-- FIM DOS DADOS DA BARRA DE NAVEGACAO -->
+
+          </nav><!-- FIM DA BARRA DE NAVEGACAO EM SI -->
+      
+
+        </div><!-- COL QUE PEGA AS 12 COLUNAS DA TELA-->
+      </div><!-- FIM BARRA DE NAVEGACAO -->
+
+
+      <!-- LINHA DOS POSTAS -->
+      <div class="row">
+
+        <!-- COLUNA DOS POSTS -->
+        <div class="col-md-8 col-sm-12">
+          
+
+          
+          <!-- POST 1 - MODELO -->
+          <div class="blog-post">
+
+            <!-- TITULO DO POST -->
+            <h3 class="mb-3 pb-2 border-bottom"><a href="#">Lorem ipsum dolor sit amet.</a></h3>
+
+            <!-- LINHA DO POST -->
+            <div class="row">
+
+              <!-- IMAGEM -->
+              <div class="col-md-12 col-lg-6 mb-3">
+                <a href="#">
+                  <img class="img-fluid rounded" src="assets/img.jpg" alt="Imagem de um homem segurando um telefone.">
+                </a>
+              </div>
+
+              <!-- TEXTO DO POST -->
+              <div class="col-md-12 col-lg-6 mb-3">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatum a quo ad, sint molestiae alias obcaecati, culpa iste explicabo laudantium, at cum dolorum cupiditate enim delectus inventore illo dolore. Omnis consequatur doloribus, sed temporibus beatae dolores obcaecati voluptatum ipsa. Quibusdam, beatae officiis voluptatum repudiandae incidunt commodi dolore architecto possimus?</p>
+                
+              </div>
+
+            </div><!-- FIM DA LINHA DO POST -->
+
+            <p class="text-muted">Publicado em <span class="badge badge-my-color-4">23/07/2018</span></p>
+          </div><!-- FIM POST 1 - MODELO -->
+          
+
+          
+          <!-- POST 1 - MODELO -->
+          <div class="blog-post">
+
+            <!-- TITULO DO POST -->
+            <h3 class="mb-3 pb-2 border-bottom"><a href="#">Lorem ipsum dolor sit amet.</a></h3>
+
+            <!-- LINHA DO POST -->
+            <div class="row">
+
+              <!-- IMAGEM -->
+              <div class="col-md-12 col-lg-6 mb-3">
+                <a href="#">
+                  <img class="img-fluid rounded" src="assets/img.jpg" alt="Imagem de um homem segurando um telefone.">
+                </a>
+              </div>
+
+              <!-- TEXTO DO POST -->
+              <div class="col-md-12 col-lg-6 mb-3">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatum a quo ad, sint molestiae alias obcaecati, culpa iste explicabo laudantium, at cum dolorum cupiditate enim delectus inventore illo dolore. Omnis consequatur doloribus, sed temporibus beatae dolores obcaecati voluptatum ipsa. Quibusdam, beatae officiis voluptatum repudiandae incidunt commodi dolore architecto possimus?</p>
+                
+              </div>
+
+            </div><!-- FIM DA LINHA DO POST -->
+
+            <p class="text-muted">Publicado em <span class="badge badge-my-color-4">23/07/2018</span></p>
+          </div><!-- FIM POST 1 - MODELO -->
+
+          
+
+
+
+
+
+
+          <!-- PAGINACAO -->
+          <div class="blog-pagination mb-5">
+
+            <a href="#" class="btn btn-outline-my-color-5">Mais antigos</a>
+            <a href="#" class="btn btn-outline-my-color-5">Mais novos</a>
+
+          </div><!-- FIM DA PAGINACAO -->
+
+        </div><!-- FIM DA COLUNA DOS POSTS-->
+
+
+
+        
+        <!-- BARRA LATERAL -->
+        <div class="col-md-4 col-sm-12">
+
+          <!-- CARD CATEGORIA -->
+          <div class="card mb-4">
+            <h5 class="card-header">Categorias</h5>
+            <div class="card-body">
+              <ul>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Planos</a></li>
+              </ul>
+            </div>
+          </div><!-- FIM CARD CATEGORIA -->
+
+          <!-- CARD CATEGORIA -->
+          <div class="card mb-4">
+            <h5 class="card-header">Ultimos Postes</h5>
+            <div class="card-body">
+              <ul>
+                <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet consectetur. </a></li>
+                <li><a href="#">Lorem, ipsum dolor. </a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                <li><a href="#">Lorem ipsum</a></li>
+              </ul>
+            </div>
+          </div><!-- FIM CARD CATEGORIA -->
+
+          <!-- CARD CATEGORIA -->
+          <div class="card mb-4">
+            <h5 class="card-header">Links</h5>
+            <div class="card-body">
+              <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Linkedin</a></li>
+                <li><a href="#">YouTube</a></li>
+              </ul>
+            </div>
+          </div><!-- FIM CARD CATEGORIA -->
+
+        </div><!-- FIM DA BARRA LATERAL -->
+
+      </div>
+
+    </div><!-- FIM DO CONTAINER PRINCIPAL -->
+
+    <!-- RODAPE -->
+    <div class="w-100 bg-secondary border-top border-dark mt-5 text-white">
+      <div class="container">
+        <div class="row">
+          <dov class="col py-5 text-center">
+            <h5>Meu primeiro tema com WordPress</h5>
+            <p class="mb-0">Feito por mim com muita satisfacao e esforco</p>
+          </dov>
+        </div>
+      </div>
+    </div><!-- FIM RODAPE -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
