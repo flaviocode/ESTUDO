@@ -1,21 +1,20 @@
 {
-  "name": "index",
+  "name": "INDEX",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.1.2",
+    "bootstrap": "^4.1.3",
     "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
     "gulp-sass": "^4.0.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1"
   }
 }

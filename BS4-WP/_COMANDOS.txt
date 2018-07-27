@@ -13,6 +13,15 @@ npm install gulp-sass
 npm install gulp browser-sync
 
 
+sudo npm install npm@latest -g
+npm update bootstrap
+
+COPIAR PARA UMA PASTA SRC/JS IMPORTAR NO INDEX:
+1 - node_modules/jquery/dist/jquery.js
+2 - node_modules/popper.js/dist/umd/popper.js
+3 - node_modules/bootstrap/dist/js/bootstrap.js
+
+
 ARQUIVO gulp
 ---------------------------
 var gulp = require('gulp');
