@@ -39,6 +39,12 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['sass', 'watch']);
 ---------------------------
+TEMA PARA WORDPRESS
+onepress
+
+PLUGIN
+Elementor Page Builder
+---------------------------
 
 https://www.pexels.com/
 https://getbootstrap.com
